@@ -3,6 +3,7 @@
 int create_array();
 void display(int n);
 int insert(int n);
+int delete(int n);
 
 int a[10];
 
@@ -22,7 +23,7 @@ void main() {
            n = insert(n);
        }
        else if(ch==4){
-           printf("\nAbstract Choice");
+           n = delete(n);
        }
        else if(ch==5){
            printf("\n PROGRAM TERMINATED!");
@@ -66,4 +67,28 @@ int insert(int n){
     a[pos-1] = num;
     return n+1;
 }
+
+int delete(int n){
+    int num,pos,flag=0;
+    printf("\nEnter the number you wish to delete :");
+    scanf("%d",&num);
+    for(int i=0;i<n;i++){
+        if(a[i]==num){
+            printf("\nElement %d found at position:- %d",num,i+1);
+            pos = i;
+            flag=1;
+            break;
+        }
+    }
+    if(flag){
+        for(int i=pos;i<n;i++){
+            a[i]=a[i+1];
+            if(i==n-1){
+                a[i]=0;
+            }
+        }
+    }
+    return n-1;
+}
+
 
