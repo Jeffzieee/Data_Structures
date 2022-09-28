@@ -14,7 +14,7 @@ void insert();
 void delete();
 
 void main() {
- int ch;
+    int ch;
     while(1){
         printf("\nEnter choice \n1:- Create and Insert Linked List\n2:- Display\n3:-Insert \n4:-Delete \n5:-Exit \n ");
         scanf("%d",&ch);
@@ -54,8 +54,8 @@ void create(){
             tail->link = newnode;
             tail = newnode;
         }
-       printf("\nDo you wish to continue? 1-Yes\n2-No");
-       scanf("%d",&flag);
+        printf("\nDo you wish to continue? 1-Yes\n2-No");
+        scanf("%d",&flag);
     }
 }
 
